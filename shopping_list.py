@@ -3,12 +3,14 @@ shopping_list = list()
 print("What do you want from the store?")
 print("Enter 'DONE' to stop adding items")
 
-while True:
+run = True
+while run:  # run false to stop input
     new_item = input(">> ")
     if new_item == 'DONE':
         print("Here's your list:")
         for item in shopping_list:
             print(item)
+            run = False  # run false to stop input
     else:
         shopping_list.append(new_item)
         print("{} was Added! List has {} items".format(new_item, len(shopping_list)))
