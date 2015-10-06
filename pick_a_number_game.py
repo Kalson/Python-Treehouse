@@ -15,8 +15,10 @@ while run and len(guess_nums) < allowed_guesses:
     random_num = random.randint(1, 10)
     new_number = int(input(">> "))
     print("The random number is {}, your number is {}".format(random_num, new_number))
-    if new_number > 10:
-        print("Wrong guess, it's too high! Guess a number b/w 1 and 10")
+    if new_number < 1 or new_number > 10:
+        guess_nums.append(new_number)
+        print("Wrong guess, that guess isn't between 1 and 10")
+        print("But you got {} chances left".format(allowed_guesses - len(guess_nums)))
     elif len(guess_nums) == 5:
         run = False
         print("Game Over! You have no more chances!")
@@ -25,5 +27,4 @@ while run and len(guess_nums) < allowed_guesses:
         run = False
     else:
         guess_nums.append(new_number)
-        print(len(guess_nums))
         print("Wrong guess, but you got {} chances left".format(allowed_guesses - len(guess_nums)))
