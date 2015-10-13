@@ -10,9 +10,9 @@ except:
     our_num = float(user_num)
 
 # use if, so we know the direction of our code once we have a number
-if "." not in user_num:
-    print(user_string[our_num])
-else:
+if "." not in user_num:  # for int
+    print(user_string[our_num - 1])
+else:  # for floats
     ratio = round(len(user_string)*our_num)
     print(user_string[ratio])
 
