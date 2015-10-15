@@ -15,10 +15,7 @@ def members(some_dict, some_list):
             count += 1
         else:
             count += 0
-    # compare first value in list with keys in dictionary
-    # if it's the same, then give it a count (+= 1)
-    # otherwise, don't give it a count (+= 0 or skip)
-    # count = 1 + 1 + 0 + 0
+
     return count
 
 print(members(my_dict, my_list))
