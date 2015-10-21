@@ -30,3 +30,11 @@ bigfoot = Monster()
 print(bigfoot.color)
 print(bigfoot.hit_points)
 print(bigfoot.battlecry())
+
+print("=========")
+
+lochness = Monster(color="blue-green", hit_points=500, sound="yawn", adjective="manxsome")
+print(lochness.color)
+print(lochness.hit_points)
+print(lochness.adjective)
+print(lochness.battlecry())
