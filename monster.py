@@ -22,6 +22,9 @@ class Monster:
             # key - the attribute we want to set
             # value - to give the attribute
 
+    def __str__(self):
+        return "{} {}, HP:{}, XP:{}".format(self.color.title(), self.__class__.__name__, self.hit_points, self.exp)
+
     def battlecry(self):
         return self.sound.upper()
 
@@ -66,3 +69,8 @@ print(Drake.hit_points)
 print(Drake.exp)
 print(Drake.color)
 print(Drake.battlecry())
+
+print("====")
+print(Matt)
+print(Dave)
+print(Drake)
